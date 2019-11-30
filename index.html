@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crud - Js vanilla</title>
+    
+    <!--
+    <script type="text/javascript" src="my-script.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>-->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="/node_modules/jquery/jquery.js"></script>
+    <script src="/node_modules/popper.js/dist/popper.js"></script>
+</head>
+<body>
+    <div class="container py-5">
+        <h1>
+            <i class="material-icons">
+                accessibility_new
+            </i>
+            Actividades
+
+        </h1>
+        <form id="formulario">
+            <input type="text" id="actividad" class="form-control my-3">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+
+        <div id="listaActividades" class="mt-4">
+            <div class="alert alert-danger" role="alert">
+                <i class="material-icons float-left mr-3">
+                    accessibility_new
+                </i>
+                <b>Txt</b> - Estado
+                <span class="float-right">
+                    <b>D</b>
+                    <b>E</b>
+                </span>
+            </div>
+            
+                
+        </div>
+        
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
