@@ -29,7 +29,7 @@ const pintarDB = () => {
     }else{
         arrayA.forEach(element => {
             if(element.estado == true){
-                listaActividades.innerHTML += `<div class="alert alert-primary" role="alert"><i class="material-icons float-left mr-3">I</i><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><b>D </b><b>E</b></span></div>`
+                listaActividades.innerHTML += `<div class="alert alert-primary" role="alert"><i class="material-icons float-left mr-3">accessibility_new</i><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><b>D </b><b>E<i class="material-icons">done</i></b></span></div>`
             }else{
                 listaActividades.innerHTML += `<div class="alert alert-danger" role="alert"><i class="material-icons float-left mr-3">I</i><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><b>D </b><b>E</b></span></div>`
             }
