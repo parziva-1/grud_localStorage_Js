@@ -29,9 +29,9 @@ const pintarDB = () => {
     }else{
         arrayA.forEach(element => {
             if(element.estado == true){
-                listaActividades.innerHTML += `<div class="alert alert-primary" role="alert"><i class="material-icons float-left mr-3">accessibility_new</i><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><b>D </b><b>E<i class="material-icons">done</i></b></span></div>`
+                listaActividades.innerHTML += `<div class="alert alert-primary py-3 center" role="alert"><i class="material-icons float-left mr-3 ">accessibility_new</i><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><i class="material-icons">done</i><i class="material-icons">delete</i></span></div>`
             }else{
-                listaActividades.innerHTML += `<div class="alert alert-danger" role="alert"><i class="material-icons float-left mr-3">I</i><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><b>D </b><b>E</b></span></div>`
+                listaActividades.innerHTML += `<div class="alert alert-danger py-3 center " role="alert"><i class="material-icons float-left mr-3 ">accessibility_new</i><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><i class="material-icons">done</i><i class="material-icons">delete</i></span></div>`
             }
         });
     }
@@ -77,14 +77,21 @@ document.addEventListener('DOMContentLoaded', pintarDB);
 
 listaActividades.addEventListener('click', (e) => {
     e.preventDefault();
-    let texto = e.path[2].childNodes[1].innerHTML;
-    if(e.target.innerHTML == 'D ' || e.target.innerHTML == 'E'){
+    
+    console.log(e.target.parentNode.parentNode.childNodes[1].innerText);
+    // console.log(e.path[2].childNodes[1].innerHTML);
+    
+    
+    let texto = e.target.parentNode.parentNode.childNodes[1].innerText;
+
+
+    if(e.target.innerHTML == 'done' || e.target.innerHTML == 'delete'){
         // console.log('accion de d');
-        if(e.target.innerHTML == 'D '){
+        if(e.target.innerHTML == 'done'){
             editarDB(texto);
         };
 
-        if(e.target.innerHTML == 'E'){
+        if(e.target.innerHTML == 'delete'){
             eliminarDB(texto);
         };
     }
